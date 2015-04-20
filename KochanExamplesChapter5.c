@@ -79,17 +79,65 @@ int main(int argc, const char * argv[]) {
 
 
 // Chapter 6: Working With Arrays (p 117-118)
+
+// Question 3
+//
+
+#include <stdio.h>
+
+int main(int argc, const char * argv[]) {
+    
+    int ratingCounters[11], i, n, response;
+    
+    printf("Enter the number of ints in your array:\n");
+    scanf("%i", &n);
+    
+    for (i=1; i<10; ++i)
+        ratingCounters[i] = 0;
+    
+    printf("Enter your responses:\n");
+    
+    for (i=1; i<=n; ++i) {
+        scanf("%i", &response);
+        
+        if (response < 1 || response > 10)
+            printf("Bad response: %i\n", response);
+        else
+            ++ratingCounters[response];
+    }
+    
+    printf("\n\nRating   Number of Responses\n");
+    printf("------ ------------------\n");
+    
+    for (i=1; i<=n; ++i) {
+        printf("%4i%14i\n", i, ratingCounters[i]);
+    }
+    return 0;
+}
+
 // Question 4 
-// 
 // Write a program that calculates the average of an array of 10 floating point values.
 // 
 
+#include <stdio.h>
 
+int main(int argc, const char * argv[]) {
+    
+    int i;
+    float sum, mean, a_mean[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    
+    for (i=0; i<10; i++) {
+        sum += a_mean[i];
+    }
+    
+    mean = sum/10;
+    printf("Sum is %.2f\n", sum);
+    printf("Mean is %.2f\n", mean);
+    return 0;
+}
 
-
-// The rest of the arrays are in the book, please do them, they're really useful. 
-
-
+// Question 5
+// 
 
 
 
