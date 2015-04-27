@@ -1,3 +1,32 @@
+// Practice:
+// FizzBuzz
+// (I think this is how it works)
+//
+
+#include <stdio.h>
+
+int main(int argc, const char * argv[]) {
+    
+    int num;
+    
+    printf("Enter the number of ints in your array:\n");
+    scanf("%i", &num);
+    
+    if ((num % 3 == 0) && (num % 5 != 0)) {
+        printf("Fizz\n");
+    }
+    if ((num % 5 == 0) && (num % 3 != 0)) {
+        printf("Buzz\n");
+    }
+    if ((num % 3 == 0) && (num % 5 == 0)) {
+        printf("FizzBuzz\n");
+    }
+    
+    return 0;
+}
+
+
+
 // Chapter 5: The If Statement
 // Question 2
 //
